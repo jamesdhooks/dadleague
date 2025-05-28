@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" 
+      type="image/png" 
+      href="logo.png"/>
+  <title>Dad League | iRacing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <script>
+    const email = 'test@test.com';
+    const subject = encodeURIComponent('Dad League Invite Request');
+    const body = encodeURIComponent(`Hi Dad League team,
+
+I'm a parent and racer interested in joining your iRacing league. Please send me more info on how to get involved.
+
+Thanks!`);
+    function sendEmail() {
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    }
+  </script>
+</head>
+<body>
+  <svg id="background-svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet"></svg>
+
+  <main>
+    <header>
+      <img
+        src="logo.png"
+        alt="iRacing logo"
+        class="logo"
+        loading="lazy"
+      />
+      <h1>Welcome to Dad League</h1>
+      <p>
+        Dad League is an iRacing league built for busy dads (or moms!) who still want to enjoy wheel-to-wheel racing — after the kids are asleep and the chaos of the day has settled. Whether you're surviving a newborn or managing toddlers, we get it: time is precious, and practice laps are a luxury.
+      </p>
+    </header>
+
+    <button class="cta" onclick="sendEmail()" aria-label="Request an invite to Dad League">
+      Request an Invite
+    </button>
+
+    <p>
+      We race two to three nights a week, always in the late evening hours to respect bedtime routines, dinner cleanup, and "just one more story." The vibe is low-pressure, high-respect and low commitment.
+    </p>
+
+    <p>
+      If you're looking for a league that values family-first schedules, clean racing, and camaraderie over competition, Dad League might be the perfect fit. All skill levels welcome, as long as you bring a positive attitude and understand that someone might have to hop off mid-race for a diaper emergency.
+    </p>
+
+    <footer>
+      Not affiliated with iRacing™. All trademarks and logos belong to iRacing.com Motorsport Simulations, LLC.<br />
+      Visit the <a href="https://www.iracing.com/media/" target="_blank" rel="noopener noreferrer">official iRacing Media page</a>.
+    </footer>
+  </main>
+</body>
+</html>

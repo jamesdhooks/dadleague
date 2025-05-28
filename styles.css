@@ -1,0 +1,145 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: #0d1117;
+  color: #f0f6fc;
+  overflow-x: hidden;
+  position: relative;
+  padding: 2rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+main {
+  position: relative;
+  z-index: 10;
+  max-width: 720px;
+  width: 100%;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.logo {
+  width: 160px;
+  margin: 0 auto 1rem;
+  filter: brightness(1.1);
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+  color: #cbd5e1;
+}
+
+.cta {
+  background: linear-gradient(135deg, #2ea043, #238636);
+  border: none;
+  border-radius: 9999px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 1.15rem 3.5rem;
+  cursor: pointer;
+  box-shadow:
+    0 4px 6px rgba(35, 134, 54, 0.4),
+    0 0 15px rgba(46, 160, 67, 0.6);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+  margin: 0.5rem auto 1.5rem;
+  display: inline-block;
+  user-select: none;
+  text-shadow: 0 0 5px rgba(0,0,0,0.3);
+  will-change: transform, box-shadow;
+}
+
+.cta:hover,
+.cta:focus {
+  box-shadow:
+    0 8px 15px rgba(35, 134, 54, 0.6),
+    0 0 25px rgba(46, 160, 67, 0.9);
+  transform: translateY(-4px) scale(1.05);
+  outline: none;
+}
+
+.cta:active {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow:
+    0 6px 12px rgba(35, 134, 54, 0.5),
+    0 0 20px rgba(46, 160, 67, 0.75);
+}
+
+footer {
+  font-size: 0.9rem;
+  color: #8b949e;
+  margin-top: auto;
+  max-width: 720px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  line-height: 1.4;
+}
+
+footer a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .cta {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#background-svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  overflow: visible;
+  background: linear-gradient(135deg, #0d1117 0%, #121b22 100%);
+}
